@@ -6,15 +6,15 @@ var Liquid = {
   readTemplateFile: function(path) {
     throw ("This liquid context does not allow includes.");
   },
-  
+
   registerFilters: function(filters) {
     Liquid.Template.registerFilter(filters);
   },
-  
+
   parse: function(src) {
     return Liquid.Template.parse(src);
   }
-  
+
 };
 
 //= require "extensions"
@@ -30,10 +30,6 @@ var Liquid = {
 //= require "drop"
 //= require "default_tags"
 //= require "default_filters"
-
-
-//= require <strftime>
-//= require <split>
 
 if (typeof exports !== 'undefined') {
   if (typeof module !== 'undefined' && module.exports) {
